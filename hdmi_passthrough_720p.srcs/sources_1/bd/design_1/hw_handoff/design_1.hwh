@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon May 25 18:33:17 2015" VIVADOVERSION="2014.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue May 26 11:16:08 2015" VIVADOVERSION="2014.4">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="design_1_imp" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -24,14 +24,14 @@
         <CONNECTION INSTANCE="dvi2rgb_0" PORT="TMDS_Data_n"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="hdmi_out_en" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
+    <PORT DIR="O" LEFT="0" NAME="hdmi_out_en" RIGHT="0" SIGIS="undef" SIGNAME="GND_dout">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="xlconstant_0" PORT="dout"/>
+        <CONNECTION INSTANCE="GND" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="0" NAME="hdmi_hpd" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_sw1">
+    <PORT DIR="O" LEFT="0" NAME="hdmi_hpd" RIGHT="0" SIGIS="undef" SIGNAME="VDD_dout">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="External_Ports" PORT="sw1"/>
+        <CONNECTION INSTANCE="VDD" PORT="dout"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="4" NAME="vga_r" RIGHT="0" SIGIS="undef" SIGNAME="rgb2vga_0_vga_pRed">
@@ -64,11 +64,6 @@
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="sw1" SIGIS="undef" SIGNAME="External_Ports_sw1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="External_Ports" PORT="hdmi_hpd"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="DDC_scl_i" SIGIS="undef"/>
     <PORT DIR="O" NAME="DDC_scl_o" SIGIS="undef"/>
     <PORT DIR="O" NAME="DDC_scl_t" SIGIS="undef"/>
@@ -78,6 +73,40 @@
   </EXTERNALPORTS>
 
   <MODULES>
+    <MODULE FULLNAME="/GND" HWVERSION="1.1" INSTANCE="GND" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="0"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="GND_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_out_en"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/VDD" HWVERSION="1.1" INSTANCE="VDD" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CONST_VAL" VALUE="1"/>
+        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_1_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="VDD_dout">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_hpd"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
     <MODULE FULLNAME="/clk_wiz_0" HWVERSION="5.1" INSTANCE="clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:5.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v5_1;d=pg065-clk-wiz.pdf"/>
@@ -739,23 +768,6 @@
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
-    </MODULE>
-    <MODULE FULLNAME="/xlconstant_0" HWVERSION="1.1" INSTANCE="xlconstant_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xlconstant" VLNV="xilinx.com:ip:xlconstant:1.1">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="CONST_VAL" VALUE="0"/>
-        <PARAMETER NAME="CONST_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_xlconstant_0_1"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="xlconstant_0_dout">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="hdmi_out_en"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
     </MODULE>
   </MODULES>
 

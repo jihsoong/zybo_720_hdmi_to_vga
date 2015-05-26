@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
-//Date        : Mon May 25 18:33:17 2015
+//Date        : Tue May 26 11:16:08 2015
 //Host        : WK49-Ubuntu running 64-bit Ubuntu 14.04.2 LTS
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -19,7 +19,6 @@ module design_1_wrapper
     hdmi_d_p,
     hdmi_hpd,
     hdmi_out_en,
-    sw1,
     vga_b,
     vga_g,
     vga_hs,
@@ -34,7 +33,6 @@ module design_1_wrapper
   input [2:0]hdmi_d_p;
   output [0:0]hdmi_hpd;
   output [0:0]hdmi_out_en;
-  input sw1;
   output [4:0]vga_b;
   output [5:0]vga_g;
   output vga_hs;
@@ -56,7 +54,6 @@ module design_1_wrapper
   wire [2:0]hdmi_d_p;
   wire [0:0]hdmi_hpd;
   wire [0:0]hdmi_out_en;
-  wire sw1;
   wire [4:0]vga_b;
   wire [5:0]vga_g;
   wire vga_hs;
@@ -87,7 +84,6 @@ design_1 design_1_i
         .hdmi_d_p(hdmi_d_p),
         .hdmi_hpd(hdmi_hpd),
         .hdmi_out_en(hdmi_out_en),
-        .sw1(sw1),
         .vga_b(vga_b),
         .vga_g(vga_g),
         .vga_hs(vga_hs),

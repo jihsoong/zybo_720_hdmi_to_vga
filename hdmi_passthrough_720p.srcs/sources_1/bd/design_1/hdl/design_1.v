@@ -1,7 +1,7 @@
 //Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
-//Date        : Mon May 25 18:33:17 2015
+//Date        : Tue May 26 11:16:08 2015
 //Host        : WK49-Ubuntu running 64-bit Ubuntu 14.04.2 LTS
 //Command     : generate_target design_1.bd
 //Design      : design_1
@@ -23,7 +23,6 @@ module design_1
     hdmi_d_p,
     hdmi_hpd,
     hdmi_out_en,
-    sw1,
     vga_b,
     vga_g,
     vga_hs,
@@ -42,14 +41,13 @@ module design_1
   input [2:0]hdmi_d_p;
   output [0:0]hdmi_hpd;
   output [0:0]hdmi_out_en;
-  input sw1;
   output [4:0]vga_b;
   output [5:0]vga_g;
   output vga_hs;
   output [4:0]vga_r;
   output vga_vs;
 
-  wire GND_1;
+  wire GND_2;
   wire TMDS_Clk_n_1;
   wire TMDS_Clk_p_1;
   wire [2:0]TMDS_Data_n_1;
@@ -72,8 +70,8 @@ module design_1
   wire rgb2vga_0_vga_pHSync;
   wire [4:0]rgb2vga_0_vga_pRed;
   wire rgb2vga_0_vga_pVSync;
-  wire sw1_1;
   wire [0:0]xlconstant_0_dout;
+  wire [0:0]xlconstant_1_dout;
 
   assign DDC_scl_o = dvi2rgb_0_DDC_SCL_O;
   assign DDC_scl_t = dvi2rgb_0_DDC_SCL_T;
@@ -86,20 +84,23 @@ module design_1
   assign clk_1 = clk;
   assign dvi2rgb_0_DDC_SCL_I = DDC_scl_i;
   assign dvi2rgb_0_DDC_SDA_I = DDC_sda_i;
-  assign hdmi_hpd[0] = sw1_1;
+  assign hdmi_hpd[0] = xlconstant_1_dout;
   assign hdmi_out_en[0] = xlconstant_0_dout;
-  assign sw1_1 = sw1;
   assign vga_b[4:0] = rgb2vga_0_vga_pBlue;
   assign vga_g[5:0] = rgb2vga_0_vga_pGreen;
   assign vga_hs = rgb2vga_0_vga_pHSync;
   assign vga_r[4:0] = rgb2vga_0_vga_pRed;
   assign vga_vs = rgb2vga_0_vga_pVSync;
-GND GND
-       (.G(GND_1));
+design_1_xlconstant_0_1 GND
+       (.dout(xlconstant_0_dout));
+GND GND_1
+       (.G(GND_2));
+design_1_xlconstant_1_0 VDD
+       (.dout(xlconstant_1_dout));
 design_1_clk_wiz_0_0 clk_wiz_0
        (.clk_in1(clk_1),
         .clk_out1(clk_wiz_0_clk_out1),
-        .reset(GND_1));
+        .reset(GND_2));
 design_1_dvi2rgb_0_0 dvi2rgb_0
        (.DDC_SCL_I(dvi2rgb_0_DDC_SCL_I),
         .DDC_SCL_O(dvi2rgb_0_DDC_SCL_O),
@@ -113,8 +114,8 @@ design_1_dvi2rgb_0_0 dvi2rgb_0
         .TMDS_Clk_p(TMDS_Clk_p_1),
         .TMDS_Data_n(TMDS_Data_n_1),
         .TMDS_Data_p(TMDS_Data_p_1),
-        .aRst(GND_1),
-        .pRst(GND_1),
+        .aRst(GND_2),
+        .pRst(GND_2),
         .vid_pData(dvi2rgb_0_RGB_DATA),
         .vid_pHSync(dvi2rgb_0_RGB_HSYNC),
         .vid_pVDE(dvi2rgb_0_RGB_ACTIVE_VIDEO),
@@ -130,6 +131,4 @@ design_1_rgb2vga_0_0 rgb2vga_0
         .vga_pHSync(rgb2vga_0_vga_pHSync),
         .vga_pRed(rgb2vga_0_vga_pRed),
         .vga_pVSync(rgb2vga_0_vga_pVSync));
-design_1_xlconstant_0_1 xlconstant_0
-       (.dout(xlconstant_0_dout));
 endmodule

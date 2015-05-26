@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
-| Date             : Mon May 25 18:35:25 2015
+| Date             : Tue May 26 11:18:34 2015
 | Host             : WK49-Ubuntu running 64-bit Ubuntu 14.04.2 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb
 | Design           : design_1_wrapper
@@ -30,12 +30,12 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.343  |
-| Dynamic (W)              | 0.237  |
+| Total On-Chip Power (W)  | 0.340  |
+| Dynamic (W)              | 0.234  |
 | Device Static (W)        | 0.105  |
 | Effective TJA (C/W)      | 11.5   |
-| Max Ambient (C)          | 81.0   |
-| Junction Temperature (C) | 29.0   |
+| Max Ambient (C)          | 81.1   |
+| Junction Temperature (C) | 28.9   |
 | Confidence Level         | Medium |
 | Setting File             | ---    |
 | Simulation Activity File | ---    |
@@ -50,19 +50,19 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.006 |       12 |       --- |             --- |
-| Slice Logic              |     0.001 |     1154 |       --- |             --- |
-|   LUT as Logic           |     0.001 |      386 |     17600 |            2.19 |
+| Slice Logic              |     0.001 |     1155 |       --- |             --- |
+|   LUT as Logic           |     0.001 |      388 |     17600 |            2.20 |
 |   CARRY4                 |    <0.001 |       18 |      4400 |            0.40 |
 |   Register               |    <0.001 |      495 |     35200 |            1.40 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
-|   Others                 |    <0.001 |       87 |       --- |             --- |
+|   Others                 |    <0.001 |       88 |       --- |             --- |
 |   F7/F8 Muxes            |    <0.001 |        8 |     17600 |            0.04 |
-| Signals                  |    <0.001 |      808 |       --- |             --- |
+| Signals                  |    <0.001 |      807 |       --- |             --- |
 | MMCM                     |     0.094 |        1 |         2 |           50.00 |
 | PLL                      |     0.096 |        1 |         2 |           50.00 |
-| I/O                      |     0.036 |       32 |       100 |           32.00 |
+| I/O                      |     0.033 |       31 |       100 |           31.00 |
 | Static Power             |     0.105 |          |           |                 |
-| Total                    |     0.343 |          |           |                 |
+| Total                    |     0.340 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.027 |       0.023 |      0.004 |
 | Vccaux    |       1.800 |     0.128 |       0.117 |      0.011 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -157,10 +157,12 @@ Table of Contents
 +----------------------------------+-----------+
 | Name                             | Power (W) |
 +----------------------------------+-----------+
-| design_1_wrapper                 |     0.234 |
+| design_1_wrapper                 |     0.231 |
 |   ddc_scl_iobuf                  |     0.000 |
 |   ddc_sda_iobuf                  |     0.000 |
 |   design_1_i                     |     0.230 |
+|     GND                          |     0.000 |
+|     VDD                          |     0.000 |
 |     clk_wiz_0                    |     0.096 |
 |       inst                       |     0.096 |
 |     dvi2rgb_0                    |     0.134 |
@@ -211,7 +213,6 @@ Table of Contents
 |             SyncAsyncx           |    <0.001 |
 |     rgb2vga_0                    |    <0.001 |
 |       U0                         |    <0.001 |
-|     xlconstant_0                 |     0.000 |
 +----------------------------------+-----------+
 
 

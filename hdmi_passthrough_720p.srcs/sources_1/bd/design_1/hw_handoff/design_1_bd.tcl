@@ -154,12 +154,18 @@ proc create_root_design { parentCell } {
   set hdmi_d_p [ create_bd_port -dir I -from 2 -to 0 hdmi_d_p ]
   set hdmi_hpd [ create_bd_port -dir O -from 0 -to 0 hdmi_hpd ]
   set hdmi_out_en [ create_bd_port -dir O -from 0 -to 0 hdmi_out_en ]
-  set sw1 [ create_bd_port -dir I sw1 ]
   set vga_b [ create_bd_port -dir O -from 4 -to 0 vga_b ]
   set vga_g [ create_bd_port -dir O -from 5 -to 0 vga_g ]
   set vga_hs [ create_bd_port -dir O vga_hs ]
   set vga_r [ create_bd_port -dir O -from 4 -to 0 vga_r ]
   set vga_vs [ create_bd_port -dir O vga_vs ]
+
+  # Create instance: GND, and set properties
+  set GND [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 GND ]
+  set_property -dict [ list CONFIG.CONST_VAL {0}  ] $GND
+
+  # Create instance: VDD, and set properties
+  set VDD [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 VDD ]
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.1 clk_wiz_0 ]
@@ -171,10 +177,6 @@ proc create_root_design { parentCell } {
 
   # Create instance: rgb2vga_0, and set properties
   set rgb2vga_0 [ create_bd_cell -type ip -vlnv digilentinc.com:ip:rgb2vga:1.0 rgb2vga_0 ]
-
-  # Create instance: xlconstant_0, and set properties
-  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
-  set_property -dict [ list CONFIG.CONST_VAL {0}  ] $xlconstant_0
 
   # Create interface connections
   connect_bd_intf_net -intf_net dvi2rgb_0_DDC [get_bd_intf_ports DDC] [get_bd_intf_pins dvi2rgb_0/DDC]
@@ -193,8 +195,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net rgb2vga_0_vga_pHSync [get_bd_ports vga_hs] [get_bd_pins rgb2vga_0/vga_pHSync]
   connect_bd_net -net rgb2vga_0_vga_pRed [get_bd_ports vga_r] [get_bd_pins rgb2vga_0/vga_pRed]
   connect_bd_net -net rgb2vga_0_vga_pVSync [get_bd_ports vga_vs] [get_bd_pins rgb2vga_0/vga_pVSync]
-  connect_bd_net -net sw1_1 [get_bd_ports hdmi_hpd] [get_bd_ports sw1]
-  connect_bd_net -net xlconstant_0_dout [get_bd_ports hdmi_out_en] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_0_dout [get_bd_ports hdmi_out_en] [get_bd_pins GND/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_ports hdmi_hpd] [get_bd_pins VDD/dout]
 
   # Create address segments
   

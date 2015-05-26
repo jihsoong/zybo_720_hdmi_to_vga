@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
-| Date         : Mon May 25 18:35:12 2015
+| Date         : Tue May 26 11:18:18 2015
 | Host         : WK49-Ubuntu running 64-bit Ubuntu 14.04.2 LTS
 | Command      : report_clock_utilization -file design_1_wrapper_clock_utilization_placed.rpt
 | Design       : design_1_wrapper
@@ -46,7 +46,7 @@ Table of Contents
 | Index | BUFG Cell                             | Net Name                                                    | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
 +-------+---------------------------------------+-------------------------------------------------------------+------+-------+-------+---------------+-----------+
 |     1 | design_1_i/clk_wiz_0/inst/clkf_buf    | design_1_i/clk_wiz_0/inst/clkfbout_buf_design_1_clk_wiz_0_0 |    1 |     1 |    no |         1.737 |     0.087 |
-|     2 | design_1_i/clk_wiz_0/inst/clkout1_buf | design_1_i/clk_wiz_0/inst/clk_out1                          |  162 |    53 |    no |         1.894 |     1.894 |
+|     2 | design_1_i/clk_wiz_0/inst/clkout1_buf | design_1_i/clk_wiz_0/inst/clk_out1                          |  162 |    55 |    no |         1.892 |     1.892 |
 +-------+---------------------------------------+-------------------------------------------------------------+------+-------+-------+---------------+-----------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-------+-------------------------------------------------------+-------------------------------------------+------+-------+-------+---------------+-----------+
 | Index | BUFR Cell                                             | Net Name                                  | BELs | Sites | Fixed | MaxDelay (ns) | Skew (ns) |
 +-------+-------------------------------------------------------+-------------------------------------------+------+-------+-------+---------------+-----------+
-|     1 | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/PixelClkBuffer | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |  391 |   108 |    no |         1.043 |     0.270 |
+|     1 | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/PixelClkBuffer | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |  391 |   110 |    no |         1.046 |     0.273 |
 +-------+-------------------------------------------------------+-------------------------------------------+------+-------+-------+---------------+-----------+
 
 

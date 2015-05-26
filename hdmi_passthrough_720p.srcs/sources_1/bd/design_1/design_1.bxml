@@ -4,7 +4,7 @@
     <Description>Composite Fileset</Description>
     <Generation Name="SYNTHESIS" State="GENERATED"/>
     <Generation Name="IMPLEMENTATION" State="GENERATED"/>
-    <Generation Name="SIMULATION" State="GENERATED"/>
+    <Generation Name="SIMULATION" State="STALE"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/design_1_dvi2rgb_0_0/design_1_dvi2rgb_0_0.xci" Type="IP">
         <Instance HierarchyPath="dvi2rgb_0"/>
@@ -38,7 +38,15 @@
         <UsedIn Val="SIMULATION"/>
       </File>
       <File Name="ip/design_1_xlconstant_0_1/design_1_xlconstant_0_1.xci" Type="IP">
-        <Instance HierarchyPath="xlconstant_0"/>
+        <Instance HierarchyPath="GND"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/design_1_xlconstant_1_0/design_1_xlconstant_1_0.xci" Type="IP">
+        <Instance HierarchyPath="VDD"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

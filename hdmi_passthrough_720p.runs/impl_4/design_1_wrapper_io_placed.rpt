@@ -1,7 +1,7 @@
 Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
-| Date         : Mon May 25 18:35:12 2015
+| Date         : Tue May 26 11:18:17 2015
 | Host         : WK49-Ubuntu running 64-bit Ubuntu 14.04.2 LTS
 | Command      : report_io -file design_1_wrapper_io_placed.rpt
 | Design       : design_1_wrapper
@@ -23,7 +23,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            32 |
+|            31 |
 +---------------+
 
 
@@ -167,7 +167,7 @@ Table of Contents
 | G12        |                |            | GND                     | GND           |             |         |            |      |                     |                      |     0.0 |            |           |      |                  |
 | G13        |                |            | VCCINT                  | VCCINT        |             |         |            |      |                     |                      |         |            |           |      |                  |
 | G14        |                | High Range | IO_0_35                 | User IO       |             |      35 |            |      |                     |                      |         |            |           |      |                  |
-| G15        | sw1            | High Range | IO_L19N_T3_VREF_35      | INPUT         | LVCMOS33    |      35 |            |      |                     |                 NONE |         | FIXED      |           |      | NONE             |
+| G15        |                | High Range | IO_L19N_T3_VREF_35      | User IO       |             |      35 |            |      |                     |                      |         |            |           |      |                  |
 | G16        |                |            | GND                     | GND           |             |         |            |      |                     |                      |     0.0 |            |           |      |                  |
 | G17        | ddc_scl_io     | High Range | IO_L16P_T2_35           | BIDIR         | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |      | NONE             |
 | G18        | ddc_sda_io     | High Range | IO_L16N_T2_35           | BIDIR         | LVCMOS33    |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |      | NONE             |
