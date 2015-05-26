@@ -1,0 +1,963 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vds -m64 -mode batch -messageDb vivado.pb -source design_1_wrapper.tcl
+
+
+****** Vivado v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 16:47:07 MST 2014
+  **** IP Build 1070531 on Tue Nov 18 01:10:18 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl
+# set_param gui.test TreeTableDev
+# set_param xicom.use_bs_reader 1
+# debug::add_scope template.lib 1
+# set_msg_config -id {HDL 9-1061} -limit 100000
+# set_msg_config -id {HDL 9-1654} -limit 100000
+# set_msg_config -id {Synth 8-256} -limit 10000
+# set_msg_config -id {Synth 8-638} -limit 10000
+# set_msg_config  -id {IP_Flow 19-1663}  -string {{CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'DigilentInc:user:Digi_LED:1.0'. The one found in IP location '/home/marshall/workspace/ip_repo/Digi_LED_1.0' will take precedence over the same IP in location /home/marshall/workspace/ip_repo/edit_Digi_LED_v1_0.srcs/sources_1/imports/Digi_LED_1.0}}  -suppress 
+# create_project -in_memory -part xc7z010clg400-1
+# set_param project.compositeFile.enableAutoGeneration 0
+# set_param synth.vivado.isSynthRun true
+# set_msg_config -id {IP_Flow 19-2162} -severity warning -new_severity info
+# set_property webtalk.parent_dir /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.cache/wt [current_project]
+# set_property parent.project_path /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.xpr [current_project]
+# set_property default_lib xil_defaultlib [current_project]
+# set_property target_language Verilog [current_project]
+# set_property ip_repo_paths /home/marshall/workspace/ip_repo [current_project]
+# add_files /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/design_1.bd
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/marshall/workspace/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2014.4/data/ip'.
+CRITICAL WARNING: [IP_Flow 19-1663] Duplicate IP found for 'DigilentInc:user:Digi_LED:1.0'. The one found in IP location '/home/marshall/workspace/ip_repo/my_ip_lib/Digi_LED_1.0' will take precedence over the same IP in location /home/marshall/workspace/ip_repo/edit_Digi_LED_v1_0.srcs/sources_1/imports/Digi_LED_1.0
+# set_property used_in_implementation false [get_files -all /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb.xdc]
+# set_property used_in_implementation false [get_files -all /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb_ooc.xdc]
+# set_property used_in_implementation false [get_files -all /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc]
+# set_property used_in_implementation false [get_files -all /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]
+# set_property used_in_implementation false [get_files -all /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_ooc.xdc]
+# set_property used_in_implementation false [get_files -all /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/design_1_ooc.xdc]
+# set_property is_locked true [get_files /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/design_1.bd]
+# read_verilog -library xil_defaultlib /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v
+# read_xdc /home/marshall/Downloads/ZYBO_Master.xdc
+# set_property used_in_implementation false [get_files /home/marshall/Downloads/ZYBO_Master.xdc]
+# read_xdc dont_touch.xdc
+# set_property used_in_implementation false [get_files dont_touch.xdc]
+# catch { write_hwdef -file design_1_wrapper.hwdef }
+# synth_design -top design_1_wrapper -part xc7z010clg400-1
+Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 906.152 ; gain = 151.734 ; free physical = 1322 ; free virtual = 11934
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Clocking.vhd:128]
+WARNING: [Synth 8-1565] actual for formal port arst is neither a static name nor a globally static expression [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb.vhd:153]
+WARNING: [Synth 8-1565] actual for formal port potherchrdy is neither a static name nor a globally static expression [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb.vhd:174]
+WARNING: [Synth 8-1565] actual for formal port potherchvld is neither a static name nor a globally static expression [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb.vhd:175]
+INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+INFO: [Synth 8-638] synthesizing module 'IOBUF' [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:12928]
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+	Parameter DRIVE bound to: 12 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'IOBUF' (1#1) [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:12928]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/hdl/design_1.v:12]
+INFO: [Synth 8-638] synthesizing module 'GND' [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:3852]
+INFO: [Synth 8-256] done synthesizing module 'GND' (2#1) [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:3852]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:69]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:67]
+INFO: [Synth 8-638] synthesizing module 'IBUF' [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:10250]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'IBUF' (3#1) [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:10250]
+INFO: [Synth 8-638] synthesizing module 'PLLE2_ADV' [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:26053]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter STARTUP_WAIT bound to: FALSE - type: string 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter CLKFBOUT_MULT bound to: 32 - type: integer 
+	Parameter CLKOUT0_DIVIDE bound to: 4 - type: integer 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter DIVCLK_DIVIDE bound to: 5 - type: integer 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKIN1_PERIOD bound to: 8.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.010000 - type: float 
+INFO: [Synth 8-256] done synthesizing module 'PLLE2_ADV' (4#1) [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:26053]
+INFO: [Synth 8-638] synthesizing module 'BUFG' [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:606]
+INFO: [Synth 8-256] done synthesizing module 'BUFG' (5#1) [/opt/Xilinx/Vivado/2014.4/scripts/rt/data/unisim_comp.v:606]
+INFO: [Synth 8-256] done synthesizing module 'design_1_clk_wiz_0_0_clk_wiz' (6#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_clk_wiz.v:67]
+INFO: [Synth 8-256] done synthesizing module 'design_1_clk_wiz_0_0' (7#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.v:69]
+WARNING: [Synth 8-350] instance 'clk_wiz_0' of module 'design_1_clk_wiz_0_0' requires 4 connections, but only 3 given [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/hdl/design_1.v:99]
+INFO: [Synth 8-638] synthesizing module 'design_1_dvi2rgb_0_0' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:80]
+	Parameter kEmulateDDC bound to: 1 - type: bool 
+	Parameter kRstActiveHigh bound to: 1 - type: bool 
+	Parameter kClkRange bound to: 2 - type: integer 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'dvi2rgb' declared at '/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb.vhd:64' bound to instance 'U0' of component 'dvi2rgb' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'dvi2rgb__parameterized0' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb.vhd:108]
+	Parameter kEmulateDDC bound to: 1 - type: bool 
+	Parameter kRstActiveHigh bound to: 1 - type: bool 
+	Parameter kClkRange bound to: 2 - type: integer 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'TMDS_Clocking' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Clocking.vhd:75]
+	Parameter kClkRange bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'ResetBridge' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsyncReset.vhd:72]
+	Parameter kPolarity bound to: 1'b1 
+INFO: [Synth 8-4472] Detected and applied attribute keep = TRUE [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsyncReset.vhd:73]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-4472] Detected and applied attribute async_reg = TRUE [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsync.vhd:73]
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync' (8#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'ResetBridge' (9#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsyncReset.vhd:72]
+INFO: [Synth 8-113] binding component instance 'IDelayCtrlX' to cell 'IDELAYCTRL' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Clocking.vhd:118]
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Clocking.vhd:132]
+	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
+	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKFBOUT_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKIN1_PERIOD bound to: 12.000000 - type: float 
+	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 2.000000 - type: float 
+	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT0_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT1_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT1_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT1_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT1_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT2_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT2_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT2_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT2_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT3_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT3_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT3_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT3_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT4_CASCADE bound to: 0 - type: bool 
+	Parameter CLKOUT4_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT4_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT4_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT4_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT5_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT5_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT5_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT5_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter CLKOUT6_DIVIDE bound to: 1 - type: integer 
+	Parameter CLKOUT6_DUTY_CYCLE bound to: 0.500000 - type: float 
+	Parameter CLKOUT6_PHASE bound to: 0.000000 - type: float 
+	Parameter CLKOUT6_USE_FINE_PS bound to: 0 - type: bool 
+	Parameter COMPENSATION bound to: ZHOLD - type: string 
+	Parameter DIVCLK_DIVIDE bound to: 1 - type: integer 
+	Parameter IS_CLKINSEL_INVERTED bound to: 1'b0 
+	Parameter IS_PSEN_INVERTED bound to: 1'b0 
+	Parameter IS_PSINCDEC_INVERTED bound to: 1'b0 
+	Parameter IS_PWRDWN_INVERTED bound to: 1'b0 
+	Parameter IS_RST_INVERTED bound to: 1'b0 
+	Parameter REF_JITTER1 bound to: 0.010000 - type: float 
+	Parameter REF_JITTER2 bound to: 0.000000 - type: float 
+	Parameter SS_EN bound to: FALSE - type: string 
+	Parameter SS_MODE bound to: CENTER_HIGH - type: string 
+	Parameter SS_MOD_PERIOD bound to: 10000 - type: integer 
+	Parameter STARTUP_WAIT bound to: 0 - type: bool 
+INFO: [Synth 8-113] binding component instance 'DVI_ClkGenerator' to cell 'MMCME2_ADV' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Clocking.vhd:173]
+INFO: [Synth 8-113] binding component instance 'SerialClkBuffer' to cell 'BUFIO' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Clocking.vhd:232]
+	Parameter BUFR_DIVIDE bound to: 5 - type: string 
+	Parameter SIM_DEVICE bound to: 7SERIES - type: string 
+INFO: [Synth 8-113] binding component instance 'PixelClkBuffer' to cell 'BUFR' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Clocking.vhd:238]
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized0' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized0' (9#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Clocking' (10#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Clocking.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'TMDS_Decoder' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Decoder.vhd:96]
+	Parameter kCtlTknCount bound to: 128 - type: integer 
+	Parameter kTimeoutMs bound to: 50 - type: integer 
+	Parameter kRefClkFrqMHz bound to: 200 - type: integer 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'InputSERDES' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/InputSERDES.vhd:85]
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+	Parameter kParallelWidth bound to: 10 - type: integer 
+	Parameter CAPACITANCE bound to: DONT_CARE - type: string 
+	Parameter DIFF_TERM bound to: 0 - type: bool 
+	Parameter DQS_BIAS bound to: FALSE - type: string 
+	Parameter IBUF_DELAY_VALUE bound to: 0 - type: string 
+	Parameter IBUF_LOW_PWR bound to: 1 - type: bool 
+	Parameter IFD_DELAY_VALUE bound to: AUTO - type: string 
+	Parameter IOSTANDARD bound to: TMDS_33 - type: string 
+INFO: [Synth 8-113] binding component instance 'InputBuffer' to cell 'IBUFDS' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/InputSERDES.vhd:92]
+	Parameter CINVCTRL_SEL bound to: FALSE - type: string 
+	Parameter DELAY_SRC bound to: IDATAIN - type: string 
+	Parameter HIGH_PERFORMANCE_MODE bound to: TRUE - type: string 
+	Parameter IDELAY_TYPE bound to: VARIABLE - type: string 
+	Parameter IDELAY_VALUE bound to: 0 - type: integer 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_DATAIN_INVERTED bound to: 1'b0 
+	Parameter IS_IDATAIN_INVERTED bound to: 1'b0 
+	Parameter PIPE_SEL bound to: FALSE - type: string 
+	Parameter REFCLK_FREQUENCY bound to: 200.000000 - type: float 
+	Parameter SIGNAL_PATTERN bound to: DATA - type: string 
+INFO: [Synth 8-113] binding component instance 'InputDelay' to cell 'IDELAYE2' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/InputSERDES.vhd:102]
+	Parameter DATA_RATE bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: IFD - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: MASTER - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DeserializerMaster' to cell 'ISERDESE2' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/InputSERDES.vhd:130]
+	Parameter DATA_RATE bound to: DDR - type: string 
+	Parameter DATA_WIDTH bound to: 10 - type: integer 
+	Parameter DYN_CLKDIV_INV_EN bound to: FALSE - type: string 
+	Parameter DYN_CLK_INV_EN bound to: FALSE - type: string 
+	Parameter INIT_Q1 bound to: 1'b0 
+	Parameter INIT_Q2 bound to: 1'b0 
+	Parameter INIT_Q3 bound to: 1'b0 
+	Parameter INIT_Q4 bound to: 1'b0 
+	Parameter INTERFACE_TYPE bound to: NETWORKING - type: string 
+	Parameter IOBDELAY bound to: IFD - type: string 
+	Parameter IS_CLKB_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIVP_INVERTED bound to: 1'b0 
+	Parameter IS_CLKDIV_INVERTED bound to: 1'b0 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_OCLKB_INVERTED bound to: 1'b0 
+	Parameter IS_OCLK_INVERTED bound to: 1'b0 
+	Parameter NUM_CE bound to: 2 - type: integer 
+	Parameter OFB_USED bound to: FALSE - type: string 
+	Parameter SERDES_MODE bound to: SLAVE - type: string 
+	Parameter SRVAL_Q1 bound to: 1'b0 
+	Parameter SRVAL_Q2 bound to: 1'b0 
+	Parameter SRVAL_Q3 bound to: 1'b0 
+	Parameter SRVAL_Q4 bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'DeserializerSlave' to cell 'ISERDESE2' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/InputSERDES.vhd:172]
+INFO: [Synth 8-256] done synthesizing module 'InputSERDES' (11#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/InputSERDES.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'SyncBase' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncBase.vhd:74]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'SyncAsync__parameterized1' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsync.vhd:72]
+	Parameter kResetTo bound to: 1'b0 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncAsync__parameterized1' (11#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncAsync.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'SyncBase' (12#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncBase.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'SyncBase__parameterized0' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncBase.vhd:74]
+	Parameter kResetTo bound to: 1'b1 
+	Parameter kStages bound to: 2 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'SyncBase__parameterized0' (12#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/SyncBase.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'PhaseAlign' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/PhaseAlign.vhd:95]
+	Parameter kUseFastAlgorithm bound to: 0 - type: bool 
+	Parameter kCtlTknCount bound to: 128 - type: integer 
+	Parameter kIDLY_TapValuePs bound to: 78 - type: integer 
+	Parameter kIDLY_TapWidth bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'PhaseAlign' (13#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/PhaseAlign.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'ChannelBond' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/ChannelBond.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'ChannelBond' (14#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/ChannelBond.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'TMDS_Decoder' (15#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TMDS_Decoder.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'EEPROM_8b' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/EEPROM_8b.vhd:85]
+	Parameter kSampleClkFreqInMHz bound to: 200 - type: integer 
+	Parameter kSlaveAddress bound to: 7'b1010000 
+	Parameter kAddrBits bound to: 7 - type: integer 
+	Parameter kWritable bound to: 0 - type: bool 
+	Parameter kInitFileName bound to: dgl_dvi_edid.txt - type: string 
+INFO: [Synth 8-63] RTL assertion: "Reading EDID data from file dgl_dvi_edid.txt." [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/EEPROM_8b.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'TWI_SlaveCtl' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TWI_SlaveCtl.vhd:87]
+	Parameter SLAVE_ADDRESS bound to: 8'b10100000 
+	Parameter kSampleClkFreqInMHz bound to: 200 - type: integer 
+INFO: [Synth 8-4472] Detected and applied attribute fsm_encoding = gray [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TWI_SlaveCtl.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'GlitchFilter' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/GlitchFilter.vhd:69]
+	Parameter kNoOfPeriodsToFilter bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'GlitchFilter' (16#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/GlitchFilter.vhd:69]
+INFO: [Synth 8-256] done synthesizing module 'TWI_SlaveCtl' (17#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/TWI_SlaveCtl.vhd:87]
+INFO: [Synth 8-226] default block is never used [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/EEPROM_8b.vhd:201]
+INFO: [Synth 8-256] done synthesizing module 'EEPROM_8b' (18#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/EEPROM_8b.vhd:85]
+INFO: [Synth 8-256] done synthesizing module 'dvi2rgb__parameterized0' (19#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb.vhd:108]
+INFO: [Synth 8-256] done synthesizing module 'design_1_dvi2rgb_0_0' (20#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_dvi2rgb_0_0/synth/design_1_dvi2rgb_0_0.vhd:80]
+WARNING: [Synth 8-350] instance 'dvi2rgb_0' of module 'design_1_dvi2rgb_0_0' requires 19 connections, but only 18 given [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/hdl/design_1.v:103]
+INFO: [Synth 8-638] synthesizing module 'design_1_rgb2vga_0_0' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_rgb2vga_0_0/synth/design_1_rgb2vga_0_0.vhd:71]
+	Parameter VID_IN_DATA_WIDTH bound to: 24 - type: integer 
+	Parameter kRedDepth bound to: 5 - type: integer 
+	Parameter kGreenDepth bound to: 6 - type: integer 
+	Parameter kBlueDepth bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'rgb2vga' declared at '/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/rgb2vga_v1_0/910567e3/src/rgb2vga.vhd:58' bound to instance 'U0' of component 'rgb2vga' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_rgb2vga_0_0/synth/design_1_rgb2vga_0_0.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'rgb2vga__parameterized0' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/rgb2vga_v1_0/910567e3/src/rgb2vga.vhd:81]
+	Parameter VID_IN_DATA_WIDTH bound to: 24 - type: integer 
+	Parameter kRedDepth bound to: 5 - type: integer 
+	Parameter kGreenDepth bound to: 6 - type: integer 
+	Parameter kBlueDepth bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'rgb2vga__parameterized0' (21#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/rgb2vga_v1_0/910567e3/src/rgb2vga.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'design_1_rgb2vga_0_0' (22#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_rgb2vga_0_0/synth/design_1_rgb2vga_0_0.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'design_1_xlconstant_0_1' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/sim/design_1_xlconstant_0_1.v:56]
+INFO: [Synth 8-638] synthesizing module 'xlconstant' [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/xilinx.com/xlconstant_v1_1/36911fd5/xlconstant.v:23]
+	Parameter CONST_VAL bound to: 1'b0 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xlconstant' (23#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/xilinx.com/xlconstant_v1_1/36911fd5/xlconstant.v:23]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xlconstant_0_1' (24#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/sim/design_1_xlconstant_0_1.v:56]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (25#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/hdl/design_1.v:12]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (26#1) [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 941.395 ; gain = 186.977 ; free physical = 1285 ; free virtual = 11898
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 941.395 ; gain = 186.977 ; free physical = 1285 ; free virtual = 11897
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /opt/Xilinx/Vivado/2014.4/data/parts/xilinx/zynq/zynq/xc7z010/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/Vivado/2014.4/data/parts/xilinx/zynq/zynq/xc7z010/ClockBuffers.xml
+Loading clock placement rules from /opt/Xilinx/Vivado/2014.4/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from /opt/Xilinx/Vivado/2014.4/data/parts/xilinx/zynq/PinFunctions.xml...
+Loading package from /opt/Xilinx/Vivado/2014.4/data/parts/xilinx/zynq/zynq/xc7z010/clg400/Package.xml
+Loading io standards from /opt/Xilinx/Vivado/2014.4/data/./parts/xilinx/zynq/IOStandards.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb.xdc] for cell 'design_1_i/dvi2rgb_0/U0'
+Finished Parsing XDC File [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/ipshared/digilentinc.com/dvi2rgb_v1_4/4f0fd262/src/dvi2rgb.xdc] for cell 'design_1_i/dvi2rgb_0/U0'
+Parsing XDC File [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_board.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Parsing XDC File [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+Finished Parsing XDC File [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc] for cell 'design_1_i/clk_wiz_0/inst'
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to anoth XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/marshall/Downloads/ZYBO_Master.xdc]
+Finished Parsing XDC File [/home/marshall/Downloads/ZYBO_Master.xdc]
+Parsing XDC File [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc]
+Finished Parsing XDC File [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc]
+INFO: [Timing 38-2] Deriving generated clocks
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to anoth XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 2 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 1256.770 ; gain = 3.027 ; free physical = 1095 ; free virtual = 11708
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1256.773 ; gain = 502.355 ; free physical = 1095 ; free virtual = 11707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1256.773 ; gain = 502.355 ; free physical = 1095 ; free virtual = 11707
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc, line 7).
+Applied set_property DONT_TOUCH = true for design_1_i/dvi2rgb_0. (constraint file  /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc, line 10).
+Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0. (constraint file  /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc, line 13).
+Applied set_property DONT_TOUCH = true for design_1_i/rgb2vga_0. (constraint file  /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc, line 16).
+Applied set_property DONT_TOUCH = true for design_1_i/xlconstant_0. (constraint file  /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc, line 19).
+Applied set_property DONT_TOUCH = true for design_1_i/dvi2rgb_0/U0. (constraint file  /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc, line 22).
+Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0/inst. (constraint file  /home/marshall/workspace/support/hdmi_passthrough_720p/hdmi_passthrough_720p.runs/synth_4/dont_touch.xdc, line 27).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1256.773 ; gain = 502.355 ; free physical = 1095 ; free virtual = 11707
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'pState_reg' in module 'PhaseAlign'
+ROM "pCtlTknRst" won't be mapped to RAM because it is too sparse.
+ROM "pCtlTknOvf" won't be mapped to RAM because it is too sparse.
+ROM "pEyeOpenEn" won't be mapped to RAM because it is too sparse.
+ROM "pDelayOvf" won't be mapped to RAM because it is too sparse.
+ROM "pDelayWaitOvf" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "pIDLY_LD" won't be mapped to RAM because it is too sparse.
+ROM "pIDLY_INC" won't be mapped to RAM because it is too sparse.
+ROM "pIDLY_INC" won't be mapped to RAM because it is too sparse.
+ROM "pAligned" won't be mapped to RAM because it is too sparse.
+ROM "pError" won't be mapped to RAM because it is too sparse.
+ROM "pFoundJtrFlag" won't be mapped to RAM because it is too sparse.
+ROM "pTkn3Flag" won't be mapped to RAM because it is too sparse.
+ROM "pTkn2Flag" won't be mapped to RAM because it is too sparse.
+ROM "pTkn1Flag" won't be mapped to RAM because it is too sparse.
+ROM "pTkn0Flag" won't be mapped to RAM because it is too sparse.
+ROM "pAlignRst" won't be mapped to Block RAM because address size (2) smaller than threshold (5) 
+ROM "pC0" won't be mapped to RAM because it is too sparse.
+ROM "pVde" won't be mapped to RAM because it is too sparse.
+ROM "sOut" won't be mapped to Block RAM because address size (4) smaller than threshold (5) 
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'TWI_SlaveCtl'
+ROM "shiftBitOut" won't be mapped to Block RAM because address size (3) smaller than threshold (5) 
+ROM "nstate" won't be mapped to RAM because it is too sparse.
+ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "nstate" won't be mapped to Block RAM because address size (1) smaller than threshold (5) 
+ROM "eeprom" won't be mapped to RAM because it is too sparse.
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'gray' in module 'TWI_SlaveCtl'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1256.773 ; gain = 502.355 ; free physical = 1089 ; free virtual = 11701
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 4     
+	   2 Input      6 Bit       Adders := 3     
+	   2 Input      5 Bit       Adders := 13    
+	   2 Input      4 Bit       Adders := 2     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 6     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               24 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	               10 Bit    Registers := 6     
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 13    
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 21    
+	                1 Bit    Registers := 104   
++---RAMs : 
+	              320 Bit         RAMs := 3     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 3     
+	   2 Input     10 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 7     
+	   5 Input      8 Bit        Muxes := 3     
+	 129 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 3     
+	   2 Input      5 Bit        Muxes := 3     
+	   2 Input      4 Bit        Muxes := 3     
+	  22 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 111   
+	   4 Input      1 Bit        Muxes := 10    
+	   3 Input      1 Bit        Muxes := 3     
+	   5 Input      1 Bit        Muxes := 12    
+	   7 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module design_1_wrapper 
+Detailed RTL Component Info : 
+Module design_1_clk_wiz_0_0_clk_wiz 
+Detailed RTL Component Info : 
+Module design_1_clk_wiz_0_0 
+Detailed RTL Component Info : 
+Module SyncAsync 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module ResetBridge 
+Detailed RTL Component Info : 
+Module SyncAsync__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module TMDS_Clocking 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 1     
++---Registers : 
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+Module InputSERDES 
+Detailed RTL Component Info : 
+Module SyncAsync__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
+Module SyncBase 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module SyncBase__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+Module PhaseAlign 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      5 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
++---Muxes : 
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 21    
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+Module ChannelBond 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      5 Bit       Adders := 3     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                5 Bit    Registers := 2     
+	                1 Bit    Registers := 7     
++---RAMs : 
+	              320 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module TMDS_Decoder 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 14    
++---Registers : 
+	                8 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   5 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
+	   5 Input      1 Bit        Muxes := 4     
+Module GlitchFilter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module TWI_SlaveCtl 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	  22 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 1     
+Module EEPROM_8b 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
++---Muxes : 
+	 129 Input      8 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module dvi2rgb__parameterized0 
+Detailed RTL Component Info : 
+Module design_1_dvi2rgb_0_0 
+Detailed RTL Component Info : 
+Module rgb2vga__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+Module design_1_rgb2vga_0_0 
+Detailed RTL Component Info : 
+Module xlconstant 
+Detailed RTL Component Info : 
+Module design_1_xlconstant_0_1 
+Detailed RTL Component Info : 
+Module design_1 
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1256.773 ; gain = 502.355 ; free physical = 1089 ; free virtual = 11701
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pTkn0Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknRst" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknOvf" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pEyeOpenEn" won't be mapped to RAM because it is too sparse.
+ROM "p_0_out" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pIDLY_LD" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pAligned" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[2].DecoderX/PhaseAlignX/pError" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pTkn0Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknRst" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknOvf" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pEyeOpenEn" won't be mapped to RAM because it is too sparse.
+ROM "p_0_out" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pIDLY_LD" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pAligned" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[1].DecoderX/PhaseAlignX/pError" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn1Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn2Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn3Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pTkn0Flag" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknRst" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknOvf" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pEyeOpenEn" won't be mapped to RAM because it is too sparse.
+ROM "p_0_out" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pIDLY_INC" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pIDLY_LD" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pAligned" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/PhaseAlignX/pError" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/pC0" won't be mapped to RAM because it is too sparse.
+ROM "DataDecoders[0].DecoderX/pVde" won't be mapped to RAM because it is too sparse.
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1256.773 ; gain = 502.355 ; free physical = 1089 ; free virtual = 11701
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1256.773 ; gain = 502.355 ; free physical = 1089 ; free virtual = 11701
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: 
++------------+-------------------------------------------------+--------------------+----------------------+--------------+---------------------------------------------------------------+
+|Module Name | RTL Object                                      | Inference Criteria | Size (depth X width) | Primitives   | Hierarchical Name                                             | 
++------------+-------------------------------------------------+--------------------+----------------------+--------------+---------------------------------------------------------------+
+|dvi2rgb     | DataDecoders[2].DecoderX/ChannelBondX/pFIFO_reg | Implied            | 32 X 10              | RAM32M x 2   | design_1_wrapper/design_1/design_1_dvi2rgb_0_0/dvi2rgb/ram__3 | 
+|dvi2rgb     | DataDecoders[1].DecoderX/ChannelBondX/pFIFO_reg | Implied            | 32 X 10              | RAM32M x 2   | design_1_wrapper/design_1/design_1_dvi2rgb_0_0/dvi2rgb/ram__4 | 
+|dvi2rgb     | DataDecoders[0].DecoderX/ChannelBondX/pFIFO_reg | Implied            | 32 X 10              | RAM32M x 2   | design_1_wrapper/design_1/design_1_dvi2rgb_0_0/dvi2rgb/ram__5 | 
++------------+-------------------------------------------------+--------------------+----------------------+--------------+---------------------------------------------------------------+
+
+Note: The table shows RAMs generated at current stage. Some RAM generation could be reversed due to later optimizations. Multiple instantiated RAMs are reported only once. "Hierarchical Name" reflects the hierarchical modules names of the RAM and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1067 ; free virtual = 11680
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1067 ; free virtual = 11680
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1067 ; free virtual = 11680
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1067 ; free virtual = 11680
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1016 ; free virtual = 11627
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1015 ; free virtual = 11627
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1002 ; free virtual = 11614
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1001 ; free virtual = 11613
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1001 ; free virtual = 11613
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1001 ; free virtual = 11613
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------------+------+
+|      |Cell        |Count |
++------+------------+------+
+|1     |BUFG        |     2|
+|2     |BUFIO       |     1|
+|3     |BUFR        |     1|
+|4     |GND         |     1|
+|5     |IDELAYCTRL  |     1|
+|6     |IDELAYE2    |     3|
+|7     |INV         |     1|
+|8     |ISERDESE2   |     3|
+|9     |ISERDESE2_1 |     3|
+|10    |LUT1        |    24|
+|11    |LUT2        |    67|
+|12    |LUT3        |    78|
+|13    |LUT4        |   107|
+|14    |LUT5        |    89|
+|15    |LUT6        |   147|
+|16    |MMCME2_ADV  |     1|
+|17    |MUXCY_L     |    69|
+|18    |MUXF7       |     8|
+|19    |PLLE2_ADV   |     1|
+|20    |RAM32M      |     6|
+|21    |XORCY       |    72|
+|22    |FDCE        |    10|
+|23    |FDPE        |    20|
+|24    |FDRE        |   463|
+|25    |FDSE        |    12|
+|26    |IBUF        |     2|
+|27    |IBUFDS      |     4|
+|28    |IOBUF       |     2|
+|29    |OBUF        |    20|
++------+------------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+-----------------------------+------+
+|      |Instance                           |Module                       |Cells |
++------+-----------------------------------+-----------------------------+------+
+|1     |top                                |                             |  1218|
+|2     |  design_1_i                       |design_1                     |  1195|
+|3     |    clk_wiz_0                      |design_1_clk_wiz_0_0         |     4|
+|4     |      inst                         |design_1_clk_wiz_0_0_clk_wiz |     4|
+|5     |    dvi2rgb_0                      |design_1_dvi2rgb_0_0         |  1171|
+|6     |      U0                           |dvi2rgb__parameterized0      |  1171|
+|7     |        \DataDecoders[0].DecoderX  |TMDS_Decoder                 |   337|
+|8     |          ChannelBondX             |ChannelBond_17               |    74|
+|9     |          InputSERDES_X            |InputSERDES_18               |     4|
+|10    |          PhaseAlignX              |PhaseAlign_19                |   156|
+|11    |          SyncBaseOvf              |SyncBase_20                  |     8|
+|12    |            SyncAsyncx             |SyncAsync__parameterized1_23 |     2|
+|13    |          SyncBaseRst              |SyncBase__parameterized0_21  |     3|
+|14    |            SyncAsyncx             |SyncAsync_22                 |     2|
+|15    |        \DataDecoders[1].DecoderX  |TMDS_Decoder_0               |   322|
+|16    |          ChannelBondX             |ChannelBond_10               |    64|
+|17    |          InputSERDES_X            |InputSERDES_11               |     4|
+|18    |          PhaseAlignX              |PhaseAlign_12                |   154|
+|19    |          SyncBaseOvf              |SyncBase_13                  |     8|
+|20    |            SyncAsyncx             |SyncAsync__parameterized1_16 |     2|
+|21    |          SyncBaseRst              |SyncBase__parameterized0_14  |     3|
+|22    |            SyncAsyncx             |SyncAsync_15                 |     2|
+|23    |        \DataDecoders[2].DecoderX  |TMDS_Decoder_1               |   318|
+|24    |          ChannelBondX             |ChannelBond                  |    65|
+|25    |          InputSERDES_X            |InputSERDES                  |     4|
+|26    |          PhaseAlignX              |PhaseAlign                   |   149|
+|27    |          SyncBaseOvf              |SyncBase                     |     8|
+|28    |            SyncAsyncx             |SyncAsync__parameterized1    |     2|
+|29    |          SyncBaseRst              |SyncBase__parameterized0     |     3|
+|30    |            SyncAsyncx             |SyncAsync_9                  |     2|
+|31    |        \GenerateDDC.DDC_EEPROM    |EEPROM_8b                    |   155|
+|32    |          I2C_SlaveController      |TWI_SlaveCtl                 |   102|
+|33    |            GlitchF_SCL            |GlitchFilter                 |    12|
+|34    |            GlitchF_SDA            |GlitchFilter_6               |    12|
+|35    |            SyncSCL                |SyncAsync_7                  |     3|
+|36    |            SyncSDA                |SyncAsync_8                  |     3|
+|37    |        LockLostReset              |ResetBridge                  |     2|
+|38    |          SyncAsyncx               |SyncAsync_5                  |     2|
+|39    |        TMDS_ClockingX             |TMDS_Clocking                |    36|
+|40    |          LockLostReset            |ResetBridge_2                |     3|
+|41    |            SyncAsyncx             |SyncAsync_4                  |     3|
+|42    |          MMCM_LockSync            |SyncAsync__parameterized0    |     4|
+|43    |          RdyLostReset             |ResetBridge_3                |     3|
+|44    |            SyncAsyncx             |SyncAsync                    |     2|
+|45    |    rgb2vga_0                      |design_1_rgb2vga_0_0         |    19|
+|46    |      U0                           |rgb2vga__parameterized0      |    19|
+|47    |    xlconstant_0                   |design_1_xlconstant_0_1      |     0|
++------+-----------------------------------+-----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1001 ; free virtual = 11613
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1256.777 ; gain = 84.129 ; free physical = 1001 ; free virtual = 11613
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1256.777 ; gain = 502.359 ; free physical = 1001 ; free virtual = 11613
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 166 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-140] Inserted 0 IBUFs to IO ports without IO buffers.
+INFO: [Opt 31-141] Inserted 0 OBUFs to IO ports without IO buffers.
+INFO: [Opt 31-138] Pushed 1 inverter(s) to 6 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 26 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 18 instances
+  IOBUF => IOBUF (IBUF, OBUFT): 2 instances
+  RAM32M => RAM32M (RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMS32, RAMS32): 6 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+95 Infos, 6 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 1259.770 ; gain = 402.613 ; free physical = 998 ; free virtual = 11609
+# write_checkpoint -noxdef design_1_wrapper.dcp
+# catch { report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb }
+report_utilization: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.12 . Memory (MB): peak = 1259.773 ; gain = 0.000 ; free physical = 996 ; free virtual = 11608
+INFO: [Common 17-206] Exiting Vivado at Mon May 25 18:34:47 2015...

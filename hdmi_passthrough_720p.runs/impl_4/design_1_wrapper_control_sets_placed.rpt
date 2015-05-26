@@ -1,0 +1,88 @@
+Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2014.4 (lin64) Build 1071353 Tue Nov 18 16:47:07 MST 2014
+| Date         : Mon May 25 18:35:12 2015
+| Host         : WK49-Ubuntu running 64-bit Ubuntu 14.04.2 LTS
+| Command      : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+| Design       : design_1_wrapper
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    35 |
+| Minimum Number of register sites lost to control set restrictions |   113 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             204 |           63 |
+| No           | No                    | Yes                    |              28 |           18 |
+| No           | Yes                   | No                     |              78 |           23 |
+| Yes          | No                    | No                     |              37 |           11 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             148 |           36 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
+|                Clock Signal                |                                                  Enable Signal                                                 |                                    Set/Reset Signal                                    | Slice Load Count | Bel Load Count |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
+|  design_1_i/clk_wiz_0/inst/clk_out1        |                                                                                                                | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/RdyLostReset/SyncAsyncx/Q[0]                    |                1 |              1 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        |                                                                                                                | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/RdyLostReset/aRst_int                           |                1 |              2 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        |                                                                                                                | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/LockLostReset/SyncAsyncx/Q[0]                   |                1 |              2 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O3                                              |                1 |              2 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/DataDecoders[1].DecoderX/PhaseAlignX/n_0_pEyeOpenCnt[3]_i_1__1 |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        | design_1_i/dvi2rgb_0/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SDA/sel                             | design_1_i/dvi2rgb_0/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/SyncSDA/SR[0]       |                1 |              4 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        | design_1_i/dvi2rgb_0/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/GlitchF_SCL/n_0_Filter.cntPeriods[3]_i_2__0 | design_1_i/dvi2rgb_0/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/SyncSCL/SR[0]       |                1 |              4 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[2].DecoderX/PhaseAlignX/n_0_pCenterTap[5]_i_1                             |                                                                                        |                2 |              5 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/n_0_rDlyRstCnt[4]_i_1                                                   | design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/LockLostReset/SyncAsyncx/Q[0]                   |                1 |              5 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/PhaseAlignX/n_0_pCenterTap[5]_i_1__1                          |                                                                                        |                2 |              5 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[1].DecoderX/PhaseAlignX/n_0_pCenterTap[5]_i_1__0                          |                                                                                        |                2 |              5 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/PhaseAlignX/SR[0]                     |                2 |              6 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/PhaseAlignX/O3[0]                     |                2 |              6 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/PhaseAlignX/O4                        |                2 |              6 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/DataDecoders[2].DecoderX/PhaseAlignX/pCtlTknRst                |                2 |              7 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/DataDecoders[1].DecoderX/PhaseAlignX/pCtlTknRst                |                3 |              7 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/PhaseAlignX/pCtlTknRst                |                2 |              7 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        | design_1_i/dvi2rgb_0/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/n_0_dataByte[7]_i_1                         |                                                                                        |                2 |              8 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        |                                                                                                                | design_1_i/dvi2rgb_0/U0/LockLostReset/SyncAsyncx/Q[0]                                  |                6 |              9 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[1].DecoderX/ChannelBondX/n_0_pRdEn_reg                                    | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/PhaseAlignX/O3[0]                     |                2 |             10 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[2].DecoderX/ChannelBondX/n_0_pRdEn_reg                                    | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/PhaseAlignX/O4                        |                2 |             10 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/ChannelBondX/n_0_pRdEn_reg                                    | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/PhaseAlignX/SR[0]                     |                3 |             10 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/PhaseAlignX/n_0_pState[10]_i_1__1                             | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/n_0_pAlignRst_reg                     |                2 |             11 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[1].DecoderX/PhaseAlignX/n_0_pState[10]_i_1__0                             | design_1_i/dvi2rgb_0/U0/DataDecoders[1].DecoderX/n_0_pAlignRst_reg                     |                3 |             11 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[2].DecoderX/PhaseAlignX/n_0_pState[10]_i_1                                | design_1_i/dvi2rgb_0/U0/DataDecoders[2].DecoderX/pAlignRst                             |                3 |             11 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/LockLostReset/SyncAsyncx/Q[0]                                  |                8 |             12 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        | design_1_i/dvi2rgb_0/U0/GenerateDDC.DDC_EEPROM/I2C_SlaveController/E[0]                                        |                                                                                        |                3 |             14 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/rgb2vga_0/U0/n_0_int_pData[23]_i_1                                          |                4 |             16 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                | design_1_i/dvi2rgb_0/U0/DataDecoders[2].DecoderX/ChannelBondX/SR[0]                    |                5 |             19 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        | design_1_i/dvi2rgb_0/U0/DataDecoders[1].DecoderX/n_0_rTimeoutCnt[0]_i_1__0                                     | design_1_i/dvi2rgb_0/U0/DataDecoders[1].DecoderX/SyncBaseRst/SyncAsyncx/O1[0]          |                6 |             24 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        | design_1_i/dvi2rgb_0/U0/DataDecoders[2].DecoderX/n_0_rTimeoutCnt[0]_i_1                                        | design_1_i/dvi2rgb_0/U0/DataDecoders[2].DecoderX/SyncBaseRst/SyncAsyncx/O1[0]          |                6 |             24 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/n_0_rTimeoutCnt[0]_i_1__1                                     | design_1_i/dvi2rgb_0/U0/DataDecoders[0].DecoderX/SyncBaseRst/SyncAsyncx/O1[0]          |                6 |             24 |
+|  design_1_i/clk_wiz_0/inst/clk_out1        |                                                                                                                |                                                                                        |               17 |             40 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 | design_1_i/dvi2rgb_0/U0/DataDecoders[2].DecoderX/PhaseAlignX/pAllVld                                           |                                                                                        |                6 |             48 |
+|  design_1_i/dvi2rgb_0/U0/TMDS_ClockingX/O2 |                                                                                                                |                                                                                        |               46 |            164 |
++--------------------------------------------+----------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------+------------------+----------------+
+
+
